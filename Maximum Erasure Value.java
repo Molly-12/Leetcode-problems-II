@@ -7,16 +7,20 @@ class Solution {
       int n= nums.length;
       Set<Integer> set= new HashSet();
       while(i<n && j<n){
-        set.add(arr[j]);
-        sum+=arr[j];
-        ans=Math.max(ans,sum);
-        i++;
+          if(!set.contains(nums[j])){
+            set.add(arr[j]);
+            sum+=arr[j];
+            ans=Math.max(ans,sum);
+            i++;
       }
-      else{
-        sum-=arr[i];
-        set.remove(arr[i]);
-        i++;
+          else{
+            sum-=arr[i];
+            set.remove(arr[i]);
+            i++;
+          }
       }
-      return ans;
+        return ans;
     }
 }
+
+      
