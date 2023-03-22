@@ -32,7 +32,7 @@ class Solution {
       else{
         int x=(m+n)/2;
         double p=res[x];
-        double q=res[x+1];
+        double q=res[x-1];
         return (p+q)/2;
       }
     }
